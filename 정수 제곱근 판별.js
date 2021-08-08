@@ -1,2 +1,7 @@
-let a = 123454321;
-console.log(a / Math.sqrt(a) === parseInt(a ** 0.5));
+// https://programmers.co.kr/learn/courses/30/lessons/12934
+
+function solution(n) {
+  return n / Math.sqrt(n) === parseInt(n ** 0.5)
+    ? (parseInt(n ** 0.5) + 1) ** 2
+    : -1;
+}
