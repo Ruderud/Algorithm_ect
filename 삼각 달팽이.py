@@ -64,4 +64,4 @@ def solution1(n):
     return sum(b,[])
 
 n = 5
-print(solution1(n))
+print(solution1(n)) 
