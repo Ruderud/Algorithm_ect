@@ -68,4 +68,4 @@ table = [
     [0,1,0,0,0,0]
     ]
 
-print(solution(game_board, table))
+print(solution(game_board, table)) 
