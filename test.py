@@ -1,6 +1,9 @@
-a = [1,2,3,4]
 
-n = 0
-b = a[n+1:n]
 
-print(b)
+from collections import deque
+
+a = deque([1,2,3,4,5])
+
+a.rotate(6)
+
+print(a)
