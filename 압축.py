@@ -44,3 +44,23 @@ def solution(msg):
 # msg = "ABABABABABABABAB"
 msg = "KAKAO"
 print(solution(msg))
+
+
+#다른답
+def solution(msg):
+    answer = []
+    #dict도 list comprehansion 문장 형태로 가능
+    tmp = {chr(e + 64): e for e in range(1, 27)}
+    num = 27
+    while msg:
+        tt = 1
+        while msg[:tt] in tmp.keys() and tt <= msg.__len__():
+            tt += 1
+        tt -= 1
+        if msg[:tt] in tmp.keys():
+            answer.append(tmp[msg[:tt]])
+            tmp[msg[:tt + 1]] = num
+            num += 1
+        #검사가 끝난 만큼의 글자를 제외한 나머지만을 슬라이싱처리
+        msg = msg[tt:]
+    return answer
