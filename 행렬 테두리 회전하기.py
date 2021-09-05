@@ -1,8 +1,6 @@
 # https://programmers.co.kr/learn/courses/30/lessons/77485
 
 def rotate(array, query):
-
-    
     ax, ay = query[0]-1, query[1]-1
     bx, by = query[2]-1, query[3]-1
 
@@ -35,9 +33,7 @@ def rotate(array, query):
 
     array[ax][ay] = save_val
 
-
     return array, min_num
-
 
 def solution(rows, columns, queries):
     answer = []
